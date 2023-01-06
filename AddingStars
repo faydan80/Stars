@@ -1,0 +1,26 @@
+package days.day43_06_01_2023;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class AddingStar {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>(Arrays.asList("Ahmet", "Can", "Semih", "Cem", "Kaan", "Tom", "Max", "Tim", "Michael"));
+        System.out.println("stars(names).toString() = " + stars(names).toString());
+
+    }
+
+    public static ArrayList stars(ArrayList<String> newNames) {
+        ArrayList<String> tempList = new ArrayList<>();
+
+
+        for (String names1 : newNames) {
+            if (names1.length() == 3) {
+                tempList.add("***");
+            }
+            tempList.add(names1);
+        }
+        System.out.println("tempList.toString() = " + tempList.toString());
+        return tempList;
+    }
+}
